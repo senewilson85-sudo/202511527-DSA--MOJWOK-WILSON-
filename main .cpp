@@ -1,23 +1,23 @@
-#include <iostream>
+
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include <string>
 using namespace std;
 
-// Function using pointers
-void swapNumbers(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+// B. Student Structure
+struct Student {
+    int id;
+    string name;
+    int age;
+    string course;
+};
 
-int main() {
-    int x, y;
-    cout << "Enter first number: ";
-    cin >> x;
-    cout << "Enter second number: ";
-    cin >> y;
+// C. Function Declarations
+void addStudent();
+void displayStudents();
+void searchStudent();
+void updateStudent();
+void deleteStudent();
 
-    cout << "Before swap: x = " << x << ", y = " << y << endl;
-    swapNumbers(&x, &y); // pass addresses
-    cout << "After swap:  x = " << x << ", y = " << y << endl;
-
-    return 0;
-}
+#endif
